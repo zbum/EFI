@@ -934,35 +934,35 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>07/12/2020</string>
+		<string>04/12/2020</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IMP11.88Z.F000.B00.2007121438</string>
+		<string>IM151.88Z.F000.B00.2004121758</string>
 		<key>Board-ID</key>
-		<string>Mac-7BA5B2D9E42DDD94</string>
+		<string>Mac-42FD25EABCABB274</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02053108QXJG36CB</string>
+		<string>C02510902QXG2Y7AD</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
 		<string>1.0</string>
 		<key>ChassisAssetTag</key>
-		<string>iMacPro-Aluminum</string>
+		<string>iMac-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>0x09</string>
+		<string>0x0D</string>
 		<key>EfiVersion</key>
-		<string>1539.0.0.0.1</string>
+		<string>234.0.0.0.0</string>
 		<key>Family</key>
-		<string>iMac Pro</string>
+		<string>iMac</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFD8FF53F</string>
+		<string>0xF80FE177</string>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF9FFF3F</string>
+		<string>0xFF1FFF7F</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
@@ -970,13 +970,13 @@
 		<key>Mobile</key>
 		<false/>
 		<key>PlatformFeature</key>
-		<string>0x20</string>
+		<string>0x01</string>
 		<key>ProductName</key>
-		<string>iMacPro1,1</string>
+		<string>iMac15,1</string>
 		<key>SerialNumber</key>
-		<string>C02DX0BSHX87</string>
+		<string>C02PDSZBFY10</string>
 		<key>SmUUID</key>
-		<string>CC0B1364-231F-480B-B323-53BA4254FFC5</string>
+		<string>5CE1EAED-D006-4435-A913-23855B08934F</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
