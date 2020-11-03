@@ -10,7 +10,7 @@
 		<dict>
 			<key>#EnableC4</key>
 			<false/>
-			<key>#UseSystemIO</key>
+			<key>#EnableC7</key>
 			<false/>
 			<key>EnableC6</key>
 			<true/>
@@ -24,21 +24,21 @@
 			<integer>12</integer>
 			<key>#C3Latency</key>
 			<string>0x03E7</string>
-			<key>#UnderVoltStep</key>
-			<integer>1</integer>
-			<key>#MinMultiplier</key>
-			<integer>8</integer>
 			<key>#EnableC6</key>
 			<true/>
+			<key>#MinMultiplier</key>
+			<integer>8</integer>
+			<key>#UnderVoltStep</key>
+			<integer>1</integer>
 			<key>#DropOem</key>
 			<true/>
 			<key>#PLimitDict</key>
 			<integer>1</integer>
+			<key>#UseSystemIO</key>
+			<false/>
 			<key>#NoOemTableId</key>
 			<false/>
 			<key>#NoDynamicExtract</key>
-			<false/>
-			<key>#EnableC7</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -370,10 +370,10 @@
 					<string>M</string>
 					<key>Volume</key>
 					<string>D68F1885-571C-4441-8DD5-F14803EFEF54</string>
-					<key>Disabled</key>
-					<true/>
 					<key>Arguments</key>
 					<string>Kernel=mach_kernel</string>
+					<key>Disabled</key>
+					<true/>
 					<key>AddArguments</key>
 					<string>-v</string>
 					<key>Path</key>
@@ -414,8 +414,8 @@
 			<key>Legacy</key>
 			<array>
 				<dict>
-					<key>Volume</key>
-					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
+					<key>Title</key>
+					<string>MyLegacyEntry</string>
 					<key>Type</key>
 					<string>Windows</string>
 					<key>Hidden</key>
@@ -424,8 +424,8 @@
 					<string>L</string>
 					<key>Disabled</key>
 					<true/>
-					<key>Title</key>
-					<string>MyLegacyEntry</string>
+					<key>Volume</key>
+					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
 				</dict>
 			</array>
 			<key>Tool</key>
@@ -437,10 +437,10 @@
 					<string>S</string>
 					<key>Volume</key>
 					<string>D68F1885-571C-4441-8DD5-F14803EFEF54</string>
-					<key>Disabled</key>
-					<false/>
 					<key>Arguments</key>
 					<string>-b</string>
+					<key>Disabled</key>
+					<false/>
 					<key>Path</key>
 					<string>\EFI\CLOVER\TOOLS\Shell64-v1.efi</string>
 					<key>Title</key>
@@ -519,21 +519,6 @@
 				<key>device_type</key>
 				<string>Airport</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
-			<dict>
-				<key>AAPL,current-available</key>
-				<data>sAQ=</data>
-				<key>AAPL,current-in-sleep</key>
-				<data>6AM=</data>
-				<key>AAPL,current-extra</key>
-				<data>vAI=</data>
-				<key>AAPL,clock-id</key>
-				<data>AQ==</data>
-				<key>built-in</key>
-				<data>AA==</data>
-				<key>device_type</key>
-				<string>EHCI</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
 			<dict>
 				<key>AAPL,current-in-sleep</key>
@@ -555,6 +540,21 @@
 			<dict>
 				<key>built-in</key>
 				<data>AQ==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1a,0x0)</key>
+			<dict>
+				<key>AAPL,current-in-sleep</key>
+				<data>6AM=</data>
+				<key>AAPL,current-available</key>
+				<data>sAQ=</data>
+				<key>AAPL,current-extra</key>
+				<data>vAI=</data>
+				<key>AAPL,clock-id</key>
+				<data>AQ==</data>
+				<key>built-in</key>
+				<data>AA==</data>
+				<key>device_type</key>
+				<string>EHCI</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1c,0x5)/Pci(0x0,0x0)</key>
 			<dict>
@@ -596,17 +596,17 @@
 				<data>AwBmAQ==</data>
 				<key>graphic-options</key>
 				<data>DAAAAA==</data>
-				<key>AAPL,HasLid</key>
-				<data>AQAAAA==</data>
 				<key>model</key>
 				<string>Intel HD Graphics 4000</string>
+				<key>AAPL,HasLid</key>
+				<data>AQAAAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
 			<dict>
-				<key>AAPL,current-available</key>
-				<data>sAQ=</data>
 				<key>AAPL,current-in-sleep</key>
 				<data>6AM=</data>
+				<key>AAPL,current-available</key>
+				<data>sAQ=</data>
 				<key>AAPL,current-extra</key>
 				<data>vAI=</data>
 				<key>AAPL,clock-id</key>
@@ -707,8 +707,8 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>#DualLink</key>
-		<integer>0</integer>
+		<key>#VideoPorts</key>
+		<integer>2</integer>
 		<key>#Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -751,13 +751,15 @@
 			<string>0xA1</string>
 			<key>#Custom</key>
 			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
-			<key>#VendorID</key>
-			<string>0x1006</string>
 			<key>#Inject</key>
 			<true/>
+			<key>#VendorID</key>
+			<string>0x1006</string>
 		</dict>
 		<key>#LoadVBios</key>
 		<false/>
+		<key>#NvidiaGeneric</key>
+		<true/>
 		<key>#display-cfg</key>
 		<string>03010300FFFF0001</string>
 		<key>#PatchVBiosBytes</key>
@@ -773,10 +775,8 @@
 		<string>04000000000003000C0000000000000A00000000</string>
 		<key>#NvidiaSingle</key>
 		<false/>
-		<key>#VideoPorts</key>
-		<integer>2</integer>
-		<key>#NvidiaGeneric</key>
-		<true/>
+		<key>#DualLink</key>
+		<integer>0</integer>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
